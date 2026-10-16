@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="dashboard">
+    <header class="header">
+      <div class="logo">☁️</div>
+      <h1>Weather Dashboard</h1>
+      <p>Discover the weather in your city</p>
+    </header>
+
+    <form id="weather-form" class="search-form">
+      <label for="city-input">Enter city name</label>
+      <div class="search-box">
+        <input
+          type="text"
+          id="city-input"
+          placeholder="e.g. London, Mumbai"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" id="search-btn">Search</button>
+      </div>
+    </form>
+
+    <p id="message" role="status" aria-live="polite"></p>
+
+    <section id="weather-card" class="weather-card" hidden>
+      <div class="weather-heading">
+        <div>
+          <p class="eyebrow">CURRENT WEATHER</p>
+          <h2 id="city-name">City Name</h2>
+          <p id="weather-description">Weather condition</p>
+        </div>
+        <img id="weather-icon" alt="Weather icon" />
+      </div>
+
+      <div class="temperature">
+        <span id="temperature">--</span>
+        <span class="degree">°C</span>
+      </div>
+
+      <div class="weather-details">
+        <div class="detail">
+          <span class="detail-icon">💧</span>
+          <div>
+            <p>Humidity</p>
+            <h3 id="humidity">--%</h3>
+          </div>
+        </div>
+
+        <div class="detail">
+          <span class="detail-icon">🌡️</span>
+          <div>
+            <p>Feels like</p>
+            <h3 id="feels-like">--°C</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Weather data provided by OpenWeatherMap</p>
+    </footer>
+  </main>
+</body>
+</html>
